@@ -154,5 +154,5 @@ glowCards.forEach(card => {
 const footerText = document.querySelector("footer p");
 if(footerText){
     const year = new Date().getFullYear();
-    footerText.innerHTML = `© ${year} Your Name — built with glass, light, and too much coffee.`;
+    footerText.innerHTML = `© ${year} Ingyin San — built with glass, light, and too much coffee.`;
 }
