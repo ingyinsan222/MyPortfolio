@@ -363,7 +363,7 @@ header{
 }
 .btn--solid:hover{
     transform:translateY(-3px);
-    box-shadow:0 12px 30px rgba(232,162,92,.35);
+    box-shadow:0 12px 30px rgba(188,137,9,.35);
 }
 .btn--ghost{
     background:rgba(255,255,255,.06);
@@ -594,6 +594,15 @@ section h2{ font-size:clamp(1.8rem, 3vw, 2.4rem); }
 .project-card h3{ font-family:var(--font-display); font-weight:600; font-size:1.25rem; margin:14px 0 12px; }
 .project-card p{ color:var(--ink-dim); margin-bottom:20px; }
 .stack{ color:var(--gold-soft); }
+.project-link{
+    display:inline-block;
+    margin-top:14px;
+    color:var(--cyan);
+    text-decoration:none;
+    border-bottom:1px solid transparent;
+    transition:border-color .25s var(--ease), color .25s var(--ease);
+}
+.project-link:hover{ border-color:var(--cyan); }
 
 /* ============================================
    CONTACT
