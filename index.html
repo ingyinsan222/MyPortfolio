@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Name — Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<script>
+    // Set theme before first paint to avoid a flash of the wrong mode.
+    (function(){
+        var stored = null;
+        try{ stored = localStorage.getItem("portfolio-theme"); }catch(e){}
+        var theme = stored === "day" ? "day" : "night";
+        document.documentElement.setAttribute("data-theme", theme);
+    })();
+</script>
+</head>
+<body>
+
+<!-- Ambient drifting glass orbs -->
+<div class="orbfield" aria-hidden="true">
+    <span class="orb orb--gold" data-depth="0.02"></span>
+    <span class="orb orb--cyan" data-depth="0.035"></span>
+    <span class="orb orb--gold-soft" data-depth="0.015"></span>
+</div>
+
+<!-- Navigation -->
+<header>
+    <nav class="glass nav-container">
+        <a href="#home" class="logo">YN<span>.</span></a>
+
+        <ul class="nav-links">
+            <li><a href="#home"><span class="idx">00</span>Home</a></li>
+            <li><a href="#about"><span class="idx">01</span>About</a></li>
+            <li><a href="#skills"><span class="idx">02</span>Skills</a></li>
+            <li><a href="#education"><span class="idx">03</span>Education</a></li>
+            <li><a href="#projects"><span class="idx">04</span>Projects</a></li>
+            <li><a href="#contact"><span class="idx">05</span>Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <button class="theme-toggle" id="themeToggle" aria-label="Switch to day mode">
+                <svg class="icon icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    <circle cx="12" cy="12" r="4.5"/>
+                    <path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8l1.8-1.8M18 6l1.8-1.8"/>
+                </svg>
+                <svg class="icon icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/>
+                </svg>
+            </button>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="nav-mobile glass" id="navMobile">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+</header>
+
+
+<!-- Hero -->
+<section id="home" class="hero">
+    <div class="hero-grid">
+
+        <div class="hero-copy">
+            <p class="eyebrow">Creative Developer <span class="dot">•</span> Designer</p>
+
+            <h1 class="display">
+                Building things<br>
+                that feel like <em>glass</em> —<br>
+                clear, considered,<br>
+                a little <em>alive</em>.
+            </h1>
+
+            <p class="hero-sub">
+                I'm <strong>Your Name</strong>, a student who likes turning rough ideas
+                into interfaces people enjoy touching. This site is my sandbox
+                for that — code, layout, motion, all handmade.
+            </p>
+
+            <div class="buttons">
+                <a href="#projects" class="btn btn--solid">See the work</a>
+                <a href="#contact" class="btn btn--ghost">Get in touch</a>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="glass hero-card" id="heroCard">
+                <div class="hero-card__sheen"></div>
+                <img src="photo_2026-07-12_21-01-36.jpg" alt="Profile portrait" class="hero-card__img">
+                <div class="hero-card__tag mono">
+                    <span class="pulse"></span> available for work
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <a href="#about" class="scroll-cue mono" aria-label="Scroll to About">scroll <span>↓</span></a>
+</section>
+
+
+<!-- About -->
+<section id="about">
+    <div class="section-head">
+        <span class="section-num mono">01</span>
+        <h2 class="display">About</h2>
+    </div>
+
+    <div class="glass section-card about-card">
+        <p>
+            I'm a student who got hooked on the moment a design stops being
+            a picture and starts being something you can click, drag, and
+            break. Most of what I know came from taking things apart —
+            other people's sites, my own half-finished projects — and
+            rebuilding them a little better each time.
+        </p>
+        <p>
+            Right now I'm splitting my time between coursework and personal
+            builds like this one, chasing the small details: the way a
+            panel catches light, the timing of a hover, the moment a page
+            loads and doesn't feel like every other page.
+        </p>
+
+        <div class="about-stats">
+            <div class="stat">
+                <span class="stat-num display">2+</span>
+                <span class="stat-label mono">years building</span>
+            </div>
+            <div class="stat">
+                <span class="stat-num display">6</span>
+                <span class="stat-label mono">projects shipped</span>
+            </div>
+            <div class="stat">
+                <span class="stat-num display">∞</span>
+                <span class="stat-label mono">tabs open</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Skills -->
+<section id="skills">
+    <div class="section-head">
+        <span class="section-num mono">02</span>
+        <h2 class="display">Skills</h2>
+    </div>
+
+    <div class="skills-container">
+
+        <div class="glass skill-card" style="--pct:90">
+            <svg class="skill-ring" viewBox="0 0 120 120">
+                <circle class="ring-track" cx="60" cy="60" r="52"/>
+                <circle class="ring-fill" cx="60" cy="60" r="52"/>
+            </svg>
+            <div class="skill-body">
+                <h3>HTML</h3>
+                <span class="mono">90%</span>
+            </div>
+        </div>
+
+        <div class="glass skill-card" style="--pct:85">
+            <svg class="skill-ring" viewBox="0 0 120 120">
+                <circle class="ring-track" cx="60" cy="60" r="52"/>
+                <circle class="ring-fill" cx="60" cy="60" r="52"/>
+            </svg>
+            <div class="skill-body">
+                <h3>CSS</h3>
+                <span class="mono">85%</span>
+            </div>
+        </div>
+
+        <div class="glass skill-card" style="--pct:80">
+            <svg class="skill-ring" viewBox="0 0 120 120">
+                <circle class="ring-track" cx="60" cy="60" r="52"/>
+                <circle class="ring-fill" cx="60" cy="60" r="52"/>
+            </svg>
+            <div class="skill-body">
+                <h3>JavaScript</h3>
+                <span class="mono">80%</span>
+            </div>
+        </div>
+
+        <div class="glass skill-card" style="--pct:75">
+            <svg class="skill-ring" viewBox="0 0 120 120">
+                <circle class="ring-track" cx="60" cy="60" r="52"/>
+                <circle class="ring-fill" cx="60" cy="60" r="52"/>
+            </svg>
+            <div class="skill-body">
+                <h3>Python</h3>
+                <span class="mono">75%</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Education -->
+<section id="education">
+    <div class="section-head">
+        <span class="section-num mono">03</span>
+        <h2 class="display">Education</h2>
+    </div>
+
+    <div class="glass section-card">
+        <div class="timeline">
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="mono timeline-date">2026 — Present</span>
+                <h3>University Education</h3>
+                <p>Your University Name</p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <span class="mono timeline-date">2024 — 2026</span>
+                <h3>Previous Education</h3>
+                <p>Institution Name</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Projects -->
+<section id="projects">
+    <div class="section-head">
+        <span class="section-num mono">04</span>
+        <h2 class="display">Projects</h2>
+    </div>
+
+    <div class="project-container">
+
+        <div class="glass project-card" data-tilt>
+            <div class="project-card__inner">
+                <span class="mono project-tag">01 · Web</span>
+                <h3>Portfolio Website</h3>
+                <p>
+                    This site — a personal portfolio built around a frosted-glass
+                    language, with light, motion, and layout doing the talking.
+                </p>
+                <span class="stack mono">HTML · CSS · JavaScript</span>
+            </div>
+        </div>
+
+        <div class="glass project-card" data-tilt>
+            <div class="project-card__inner">
+                <span class="mono project-tag">02 · Systems</span>
+                <h3>Student Management System</h3>
+                <p>
+                    A database-backed tool for tracking student records —
+                    my first real dive into structuring and querying data.
+                </p>
+                <span class="stack mono">Database · Programming</span>
+            </div>
+        </div>
+
+        <div class="glass project-card" data-tilt>
+            <div class="project-card__inner">
+                <span class="mono project-tag">03 · In progress</span>
+                <h3>Your Next Project</h3>
+                <p>
+                    Swap this card for whatever you're building next — a game,
+                    an app, an experiment that didn't quite work but taught you something.
+                </p>
+                <span class="stack mono">Add stack here</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Contact -->
+<section id="contact">
+    <div class="section-head">
+        <span class="section-num mono">05</span>
+        <h2 class="display">Contact</h2>
+    </div>
+
+    <div class="glass section-card contact-card">
+        <p class="contact-lead">
+            Have a project, a question, or just want to talk shop? My inbox is open.
+        </p>
+
+        <div class="contact-grid">
+            <a href="mailto:yourname@email.com" class="contact-link">
+                <span class="mono">Email</span>
+                <strong>yourname@email.com</strong>
+            </a>
+            <a href="tel:+123456789" class="contact-link">
+                <span class="mono">Phone</span>
+                <strong>+123 456 789</strong>
+            </a>
+            <div class="contact-link contact-link--static">
+                <span class="mono">Location</span>
+                <strong>Your City</strong>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer class="glass">
+    <p>© 2026 Your Name — built with glass, light, and too much coffee.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
